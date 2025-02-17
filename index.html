@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 💖</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .flor {
+            display: none;
+            width: 150px;
+            height: auto;
+        }
+        #mensaje {
+            font-size: 22px;
+            color: #880e4f;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="mostrarFlor()">Haz clic aquí 💕</button>
+    <img src="nosotros.jpeg" class="flor" id="flor" alt="Flor">
+    <div id="mensaje">❤️ VALENTINA SANABRIA ❤️
+        <br>
+        Eres la mujer que quiero en mi vida ❤️❤️
+    </div>
+
+    <script>
+        function mostrarFlor() {
+            let flor = document.getElementById("flor");
+            let mensaje = document.getElementById("mensaje");
+
+            flor.style.display = "block";
+            setTimeout(() => {
+                mensaje.style.opacity = "1";
+                mensaje.style.transform = "translateY(0)";
+            }, 500);
+        }
+    </script>
+</body>
+</html>
